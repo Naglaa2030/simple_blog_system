@@ -20,6 +20,7 @@ if (isset($_POST['userlogin'])) {
       if ($user['password'] == $password && $user['email']==$email) {
         session_start();
       $_SESSION['name'] = $name;
+      $_SESSION['id']=$user['id'];
         header("Location:index.php");
       } else {
            header("Location:user-login.php");

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2024 at 04:02 PM
+-- Generation Time: May 16, 2024 at 07:41 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -61,8 +61,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `content`, `user_id`, `created_at`) VALUES
-(1, 'test post 1 - updated', '\"\"\"hello posts table I am going to test you can me???\"\"\"', NULL, '2024-05-14 11:26:03'),
-(5, 'test 2', 'well done system', NULL, '2024-05-14 13:59:20');
+(1, 'test post 1 - updated', '\"\"\"\"hello posts table I am going to test you can me???\"\"\"\"', NULL, '2024-05-14 11:26:03'),
+(5, 'test 2', 'well done system', NULL, '2024-05-14 13:59:20'),
+(9, 'second post test ', 'insert from user form ', 1, '2024-05-16 05:40:10');
 
 -- --------------------------------------------------------
 
@@ -122,7 +123,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`

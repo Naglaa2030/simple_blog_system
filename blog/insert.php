@@ -19,7 +19,7 @@ require "check_user_session.php";
 
 <?php
 
-
+$user_id=$_SESSION['id'];
 if (isset($_POST['insert'])) {
 			$errors = [];
 			$Title = '';
@@ -33,8 +33,8 @@ if (isset($_POST['insert'])) {
 			 $Content=$_POST['content'];
 			if (count($errors) <= 0) {
 				$pdo = new pdo("mysql:host=localhost;dbname=blogdb", "root", "");
-			  $pdo->query("insert into posts(title,content)
-		values('$Title','$Content')");
+			  $pdo->query("insert into posts(title,content,user_id)
+		values('$Title','$Content','$user_id')");
 	
 			}
 			header("Location:index.php");
